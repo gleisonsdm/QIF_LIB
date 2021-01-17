@@ -5,8 +5,8 @@ A Quantitative Information Flow Open Source Library
 
 This section is organized by modules.
 ### 1.0 Basic functions
-- [ ] 1.1: Given a vector of numbers, verify whether it constitutes a valid probability distribution.
-- [ ] 1.2: Given a matrix of number, verify whether it constitutes a valid channel matrix.
+- [X] 1.1: Given a vector of numbers, verify whether it constitutes a valid probability distribution.
+- [X] 1.2: Given a matrix of number, verify whether it constitutes a valid channel matrix.
 - [ ] 1.3: Print beautifully a prior on the screen.
 - [ ] 1.4: Print beautifully a channel matrix on the screen.
 ### 2.0 Update of knowledge using priors and channels
