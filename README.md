@@ -11,7 +11,7 @@ This section is organized by modules.
 - [X] 1.4: Print beautifully a channel matrix on the screen.
 ### 2.0 Update of knowledge using priors and channels
 - [X] 2.1: Given a prior and a channel matrix, compute the corresponding joint probability distribution.
-- [ ] 2.2: Given a prior and a channel matrix, compute the corresponding hyper-distribution (i.e., the set of posterior distributions and the outer distribution on them).
+- [X] 2.2: Given a prior and a channel matrix, compute the corresponding hyper-distribution (i.e., the set of posterior distributions and the outer distribution on them).
 ### 3.0 Prior measures of information
 - [ ] 3.1: Given a prior distribution, compute its Shannon entropy.
 - [ ] 3.2: Given a prior distribution, compute its Guessing entropy.
