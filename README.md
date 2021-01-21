@@ -13,10 +13,10 @@ This section is organized by modules.
 - [X] 2.1: Given a prior and a channel matrix, compute the corresponding joint probability distribution.
 - [X] 2.2: Given a prior and a channel matrix, compute the corresponding hyper-distribution (i.e., the set of posterior distributions and the outer distribution on them).
 ### 3.0 Prior measures of information
-- [ ] 3.1: Given a prior distribution, compute its Shannon entropy.
-- [ ] 3.2: Given a prior distribution, compute its Guessing entropy.
-- [ ] 3.3: Given a prior distribution, compute its Bayes vulnerability.
-- [ ] 3.4: Given a prior distribution and a value n>=1, compute the probability of guessing correctly within n tries. (Note that when n = 1 this function coincides with Bayes vulnerability).
+- [X] 3.1: Given a prior distribution, compute its Shannon entropy.
+- [X] 3.2: Given a prior distribution, compute its Guessing entropy.
+- [X] 3.3: Given a prior distribution, compute its Bayes vulnerability.
+- [X] 3.4: Given a prior distribution and a value n>=1, compute the probability of guessing correctly within n tries. (Note that when n = 1 this function coincides with Bayes vulnerability).
 - [ ] 3.5: Given a prior distribution and a gain function, compute the g-vulnerability. (Note that when the g-function is gid, you recover Bayes vulnerability). 
 ### 4.0 Posterior measures of information 
 - [ ] 4.1: Create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
