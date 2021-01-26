@@ -19,7 +19,13 @@ This section is organized by modules.
 - [X] 3.4: Given a prior distribution and a value n>=1, compute the probability of guessing correctly within n tries. (Note that when n = 1 this function coincides with Bayes vulnerability).
 - [X] 3.5: Given a prior distribution and a gain function, compute the g-vulnerability. (Note that when the g-function is gid, you recover Bayes vulnerability). 
 ### 4.0 Posterior measures of information 
-- [ ] 4.1: Create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
+- 4.1: Create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
+- [ ] 4.1.1: Compute its Shannon entropy.
+- [ ] 4.1.2: Compute its Guessing entropy.
+- [ ] 4.1.3: Compute its Bayes vulnerability.
+- [ ] 4.1.4: Given a posterior distribution and a value n>=1, compute the probability of guessing correctly within n tries.
+- [ ] 4.1.5: Given a posterior distribution and a gain function, compute the g-vulnerability.
+#
 ### 5.0 Leakage measures
 - [ ] 5.1: Given a prior, a channel matrix, and an information function, compute the corresponding additive leakage.
 - [ ] 5.2: Given a prior, a channel matrix, and an information function, compute the corresponding multiplicative leakage.
