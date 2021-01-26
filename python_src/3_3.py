@@ -26,7 +26,7 @@ def main():
         print('--------- Output ----------')
         prior = getPrior(sys.argv[1])
         entropy = calculateBayesVulnerability(prior)
-        print("GUESSING ENTROPY")
+        print("BAYES ENTROPY")
         print(entropy.to_markdown())
         print('---------------------------')
     else:
