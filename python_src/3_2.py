@@ -19,10 +19,12 @@ def getPrior(filename):
     return None
 
 def calculateGuessingEntropy(data):
+    data = data.T.sort_values(by=[0], ascending=False).T
     n = len(data.columns)
-    logs = data.apply(lambda x: x * x)
-    logs = logs.T.sum()
-    return logs
+    entropy = 0.0
+    for i in range(0,n):
+        entropy = entropy + ((i+1) * data.T.iloc[i][0])
+    return entropy
 
 def main():
     if len(sys.argv) == 2:
@@ -30,7 +32,7 @@ def main():
         prior = getPrior(sys.argv[1])
         entropy = calculateGuessingEntropy(prior)
         print("GUESSING ENTROPY")
-        print(entropy.to_markdown())
+        print(entropy)
         print('---------------------------')
     else:
         print("File not found")
