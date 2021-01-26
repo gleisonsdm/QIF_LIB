@@ -18,6 +18,12 @@ NC='\e[0m'
 
 function runFile() {
     file="$1"
+    
+    ## JUST FOR TESTING, limit to the exercise
+    #if [ "${file}" != "4_1.py" ]; then
+    #    return
+    #fi
+
     index=$(echo "$f" | cut -f1 -d".")
     tests_name="${THIS}/../testing/tests_$index/"
     tests=$(ls "$tests_name")
