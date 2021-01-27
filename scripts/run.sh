@@ -20,9 +20,9 @@ function runFile() {
     file="$1"
     
     ## JUST FOR TESTING, limit to the exercise
-    #if [ "${file}" != "4_2.py" ]; then
-    #    return
-    #fi
+    if [ "${file}" != "4_3.py" ]; then
+        return
+    fi
 
     index=$(echo "$f" | cut -f1 -d".")
     tests_name="${THIS}/../testing/tests_$index/"
