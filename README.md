@@ -22,7 +22,7 @@ This section is organized by modules.
 - 4.1: Create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
 - [X] 4.1.1: Compute its Shannon entropy.
 - [X] 4.1.2: Compute its Guessing entropy.
-- [ ] 4.1.3: Compute its Bayes vulnerability.
+- [X] 4.1.3: Compute its Bayes vulnerability.
 - [ ] 4.1.4: Given a posterior distribution and a value n>=1, compute the probability of guessing correctly within n tries.
 - [ ] 4.1.5: Given a posterior distribution and a gain function, compute the g-vulnerability.
 #
