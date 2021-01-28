@@ -24,7 +24,7 @@ This section is organized by modules.
 - [X] 4.1.2: Compute its Guessing entropy.
 - [X] 4.1.3: Compute its Bayes vulnerability.
 - [X] 4.1.4: Given a posterior distribution and a value n>=1, compute the probability of guessing correctly within n tries.
-- [ ] 4.1.5: Given a posterior distribution and a gain function, compute the g-vulnerability.
+- [X] 4.1.5: Given a posterior distribution and a gain function, compute the g-vulnerability.
 #
 ### 5.0 Leakage measures
 - [ ] 5.1: Given a prior, a channel matrix, and an information function, compute the corresponding additive leakage.
