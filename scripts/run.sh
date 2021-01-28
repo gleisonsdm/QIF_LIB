@@ -20,7 +20,7 @@ function runFile() {
     file="$1"
     
     ## JUST FOR TESTING, limit to the exercise
-    #if [ "${file}" != "4_5.py" ]; then
+    #if [ "${file}" != "5_1.py" ]; then
     #    return
     #fi
 

@@ -86,7 +86,7 @@ def main():
         posterior = calculatePosterior(joint, outer)
         entropy = calculateNTries(posterior, outer, n)
         
-        print("Bayes Posterior Entropy")
+        print("N tries Posterior Entropy")
         print(entropy.iloc[0])
         print('---------------------------')
     else:

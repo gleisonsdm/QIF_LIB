@@ -44,10 +44,7 @@ def getGainFunction(filename, chanSize):
     data = data.fillna(0.0)
     return data
 
-def calculateJoint(filename):
-    prior = getPrior(filename)
-    chanSize = getChannelSize(filename)
-    channel = getChannel(filename, chanSize)
+def calculateJoint(prior, channel):
     if prior is None or channel is None:
         return
     prior = pd.DataFrame(np.tile(prior,(len(channel.columns),1)))
@@ -65,7 +62,21 @@ def calculatePosterior(joint, py):
     posterior = joint * py
     return posterior
 
-def calculateGVulnerability(posterior, outer, gainFunc):
+def calculateGVulnerabilityPrior(gfunc, prior):
+    ncols = len(prior.columns)
+    nrows = len(gfunc.index)
+
+    maxim = 0.0
+    for i in range(0, nrows):
+        value = 0.0
+        for j in range(0,ncols):
+            value = value + gfunc.iloc[i, j] * prior.iloc[0, j]
+        if maxim < value:
+            maxim = value
+
+    return maxim
+
+def calculateGVulnerabilityPosterior(posterior, outer, gainFunc):
     nColPost = len(posterior.columns)
     nRowPost = len(posterior.index)
     nColGain = len(gainFunc.columns)
@@ -84,19 +95,32 @@ def calculateGVulnerability(posterior, outer, gainFunc):
 
     return vulnerability
 
+def calculateMultiplicativeLeakage(Gvprior, Gvpost):
+    if Gvprior == 0.0:
+        return 99999999.99999999
+    leak = Gvpost / Gvprior
+    return leak
+
 def main():
     if len(sys.argv) == 2:
         filename = sys.argv[1]
         print('--------- Output ----------')
-        joint = calculateJoint(filename)
-        outer = calculateOuter(joint)
+        prior = getPrior(filename)
         chanSize = getChannelSize(filename)
-        gainFunction = getGainFunction(filename, chanSize)
+        channel = getChannel(filename, chanSize)
+
+        joint = calculateJoint(prior, channel)
+        outer = calculateOuter(joint)
+        gainF = getGainFunction(filename, chanSize)
 
         posterior = calculatePosterior(joint, outer)
-        vulnerability = calculateGVulnerability(posterior, outer, gainFunction)
         
-        print("G-Vulnerability Posterior Entropy")
+        priVul = calculateGVulnerabilityPrior(gainF, prior)
+        postVul= calculateGVulnerabilityPosterior(posterior, outer, gainF)
+        
+        vulnerability = calculateMultiplicativeLeakage(priVul, postVul)
+
+        print("G-Vulnerability Multiplicative Leakage")
         print(vulnerability)
         print('---------------------------')
     else:
