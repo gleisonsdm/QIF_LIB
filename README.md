@@ -27,5 +27,5 @@ This section is organized by modules.
 - [X] 4.1.5: Given a posterior distribution and a gain function, compute the g-vulnerability.
 #
 ### 5.0 Leakage measures
-- [ ] 5.1: Given a prior, a channel matrix, and an information function, compute the corresponding additive leakage.
-- [ ] 5.2: Given a prior, a channel matrix, and an information function, compute the corresponding multiplicative leakage.
+- [ ] 5.1: Given a prior, a channel matrix, and a gain function, compute the corresponding additive leakage.
+- [ ] 5.2: Given a prior, a channel matrix, and a gain function, compute the corresponding multiplicative leakage.
